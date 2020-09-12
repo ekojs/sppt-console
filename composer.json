@@ -1,0 +1,24 @@
+{
+    "name": "ekojs/sppt-client",
+    "description": "Worker SPPT - TI",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eko Junaidi Salam",
+            "email": "eko.junaidi.salam@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/console": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "EkoJunaidiSalam\\App\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.3"
+    }
+}
