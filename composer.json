@@ -18,6 +18,18 @@
             "EkoJunaidiSalam\\App\\": "src/"
         }
     },
+    "scripts": {
+        "test": "phpunit --testdox",
+        "coverage": "vendor/bin/phpunit --testdox --coverage-html build/coverage",
+        "reload": [
+            "@composer dump-autoload"
+        ]
+},
+    "autoload-dev": {
+        "psr-4": {
+            "EkoJunaidiSalam\\Tests\\": "tests/"
+        }
+    },
     "require-dev": {
         "phpunit/phpunit": "^9.3"
     }
