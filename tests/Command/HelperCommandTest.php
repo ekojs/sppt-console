@@ -6,11 +6,15 @@ use Symfony\Component\Console\Tester\CommandTester;
 use EkoJunaidiSalam\App\Command\HelperCommand;
 
 class HelperCommandTest extends TestCase {
+    protected static $app;
 
+    public static function setUpBeforeClass(): void {
+        self::$app = new Application();
+    }
+    
     public function testHelper(){
-        $app = new Application();
-		$app->add(new HelperCommand());
-        $cmd = $app->find('helper');
+		self::$app->add(new HelperCommand());
+        $cmd = self::$app->find('helper');
         $cmdTester = new CommandTester($cmd);
         $cmdTester->execute([
             'type' => 'mapper',
@@ -18,5 +22,14 @@ class HelperCommandTest extends TestCase {
 		
         $output = $cmdTester->getDisplay();
         $this->assertStringContainsString('Helper Mapper', $output);
+
+        $cmdTester->execute([
+            'type' => 'list',
+            'object' => 'mapping',
+            'filter' => '24.01',
+		]);
+		
+        $output = $cmdTester->getDisplay();
+        $this->assertStringContainsString('kota kupang', $output);
     }
 }
