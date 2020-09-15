@@ -4,8 +4,9 @@ require_once __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 use EkoJunaidiSalam\App\Command\HelperCommand;
+use EkoJunaidiSalam\App\Command\UpdateCommand;
 
 $app = new Application("SPPT-TI Helper","1.0.0");
 
-$app->addCommands([new HelperCommand()]);
+$app->addCommands([new HelperCommand(),new UpdateCommand()]);
 $app->run();

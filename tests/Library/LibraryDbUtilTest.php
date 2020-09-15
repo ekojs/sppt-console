@@ -6,7 +6,7 @@ use Symfony\Component\Console\Tester\CommandTester;
 use EkoJunaidiSalam\App\Command\HelperCommand;
 use EkoJunaidiSalam\App\Library\DbUtil;
 
-class HelperCommandTest extends TestCase {
+class LibraryDbUtilTest extends TestCase {
     protected static $app;
     public static $dbUtil;
 
