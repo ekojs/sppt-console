@@ -12,6 +12,9 @@ class HelperCommand extends Command {
     protected static $defaultName = 'helper';
     protected $listType = ['list','check'];
 
+    /**
+     * @codeCoverageIgnore
+     */
     protected function configure(){
         $this->setDescription('SPPT-TI Helper')
             ->setHelp('Perintah ini untuk menjalankan library helper dari SPPT-TI')

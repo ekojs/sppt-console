@@ -10,10 +10,10 @@ class HelperCommandTest extends TestCase {
 
     public static function setUpBeforeClass(): void {
         self::$app = new Application();
+        self::$app->add(new HelperCommand());
     }
     
-    public function testHelper(){
-		self::$app->add(new HelperCommand());
+    public function testHelperFunction(){
         $cmd = self::$app->find('helper');
         $cmdTester = new CommandTester($cmd);
         $cmdTester->execute([

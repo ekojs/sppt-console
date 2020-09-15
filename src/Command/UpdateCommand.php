@@ -10,6 +10,9 @@ use EkoJunaidiSalam\App\Library\DbUtil;
 class UpdateCommand extends Command {
     protected static $defaultName = 'update';
 
+    /**
+     * @codeCoverageIgnore
+     */
     protected function configure(){
         $this->setDescription('Update seluruh tabel parent dan child sesuai respon puskarda.')
             ->setHelp('Perintah ini untuk menjalankan update flag pada seluruh tabel parent dan child sesuai respon puskarda.')
